@@ -1,127 +1,346 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>M2Vai Shop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap" rel="stylesheet" />
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
-      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      font-family: 'Hind Siliguri', sans-serif;
       background-color: #f2f2f2;
-      color: #333;
     }
-
-    /* Top Header Fixed Design */
     header {
-      background-color: #0073e6;
+      background-color: #0077cc;
       color: white;
-      padding: 15px 30px;
+      padding: 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      flex-wrap: wrap;
     }
-
-    .logo {
-      font-size: 26px;
-      font-weight: bold;
+    header h1 {
+      margin: 0;
+      font-size: 28px;
     }
-
-    .logo span {
-      font-size: 14px;
-      display: block;
-      opacity: 0.85;
-    }
-
-    nav ul {
-      list-style: none;
+    .header-right {
       display: flex;
-      gap: 20px;
+      align-items: center;
+      gap: 10px;
     }
-
-    nav ul li a {
+    .search-box input {
+      padding: 6px 10px;
+      font-size: 14px;
+      border-radius: 4px;
+      border: none;
+      width: 160px;
+    }
+    .search-box button {
+      padding: 6px 12px;
+      font-size: 14px;
+      border: none;
+      border-radius: 4px;
+      background-color: #005fa3;
+      color: white;
+      cursor: pointer;
+    }
+    .login-box input {
+      padding: 6px 10px;
+      font-size: 14px;
+      border-radius: 4px;
+      border: none;
+      width: 120px;
+      margin-right: 5px;
+    }
+    .login-box button {
+      padding: 6px 10px;
+      font-size: 14px;
+      border: none;
+      border-radius: 4px;
+      background-color: #005fa3;
+      color: white;
+      cursor: pointer;
+    }
+    nav {
+      background-color: #005fa3;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
       color: white;
       text-decoration: none;
-      font-weight: 600;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 16px;
     }
-
-    nav ul li a:hover {
-      color: #cce7ff;
+    nav a:hover {
+      text-decoration: underline;
     }
-
-    /* Section Styles */
-    section {
-      padding: 30px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    /* Customer Feedback Section */
-    .feedback {
+    .hero {
       background-color: #ffffff;
-      border-radius: 10px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.05);
-      padding: 20px;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .hero h1 {
+      font-size: 32px;
+      color: #0077cc;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 18px;
+      margin-top: 0;
+    }
+    .categories {
+      padding: 30px 20px;
+      background-color: #e6f2ff;
+    }
+    .categories h2 {
+      text-align: center;
+      color: #003d66;
+    }
+    .category-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
       margin-top: 20px;
     }
-
-    .feedback h2 {
-      font-size: 20px;
-      margin-bottom: 10px;
-      color: #0073e6;
+    .category {
+      background-color: white;
+      padding: 15px 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      min-width: 120px;
+      text-align: center;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
     }
-
-    .feedback p {
-      font-size: 15px;
-      line-height: 1.5;
+    .category:hover {
+      background-color: #d0e7ff;
     }
-
-    /* Responsive */
-    @media (max-width: 600px) {
+    .discounts {
+      background-color: #fff3e6;
+      padding: 30px 20px;
+    }
+    .discounts h2 {
+      text-align: center;
+      color: #cc5200;
+    }
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .product {
+      background-color: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      width: 160px;
+      text-align: center;
+      font-size: 14px;
+    }
+    .product img {
+      width: 100%;
+      border-radius: 5px;
+    }
+    .reviews {
+      background-color: white;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .reviews h2 {
+      text-align: center;
+      color: #0077cc;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+    .reviews blockquote {
+      border-left: 5px solid #0077cc;
+      padding-left: 20px;
+      color: #333;
+      font-size: 16px;
+      margin-bottom: 15px;
+      font-style: italic;
+    }
+    footer {
+      background-color: #003d66;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+    .chat-box {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+    }
+    .chat-button {
+      background-color: #0077cc;
+      border: none;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 28px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+    .chat-window {
+      display: none;
+      position: absolute;
+      bottom: 70px;
+      right: 0;
+      width: 280px;
+      background: white;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .chat-window p {
+      margin: 0 0 10px 0;
+      font-weight: bold;
+      color: #0077cc;
+    }
+    .chat-window input {
+      width: 100%;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    @media (max-width: 700px) {
       header {
         flex-direction: column;
         align-items: flex-start;
       }
-
-      nav ul {
-        flex-direction: column;
+      .header-right {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: flex-start;
         gap: 10px;
-        padding-top: 10px;
+      }
+      .search-box input {
+        width: 120px;
+      }
+      .login-box input {
+        width: 100px;
+      }
+      nav a {
+        display: block;
+        margin: 8px 0;
+      }
+      .category-grid,
+      .product-grid {
+        flex-direction: column;
+        align-items: center;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header Section -->
-  <header>
-    <div class="logo">
-      M2Vai Shop
-      <span>মিল্টন ইলেকট্রনিক্স</span>
+<header>
+  <h1>M2Vai Shop</h1>
+  <div class="header-right">
+    <div class="search-box">
+      <input type="text" placeholder="সার্চ করুন | Search" />
+      <button>🔍</button>
     </div>
-    <nav>
-      <ul>
-        <li><a href="#home">হোম</a></li>
-        <li><a href="#category">ক্যাটাগরি</a></li>
-        <li><a href="#contact">যোগাযোগ</a></li>
-      </ul>
-    </nav>
-  </header>
+    <div class="login-box">
+      <input type="text" placeholder="ইউজারনেম | Username" />
+      <input type="password" placeholder="পাসওয়ার্ড | Password" />
+      <button>Login</button>
+    </div>
+  </div>
+</header>
 
-  <!-- Feedback Section (Shortened) -->
-  <section class="feedback" id="feedback">
-    <h2>ক্রেতাদের মতামত</h2>
-    <p>“এই দোকান থেকে পণ্য অর্ডার করে খুবই সন্তুষ্ট। পণ্যটি সময়মতো পেয়েছি।” — রাকিব হোসেন</p>
-  </section>
+<nav>
+  <a href="#">🏠 হোম | Home</a>
+  <a href="#">📂 ক্যাটাগরি | Categories</a>
+  <a href="#">🔥 অফার | Offers</a>
+  <a href="#">📞 যোগাযোগ | Contact</a>
+  <a href="#">ℹ️ আমাদের সম্পর্কে | About</a>
+</nav>
+
+<div class="hero">
+  <h1>Welcome to M2Vai Shop</h1>
+  <p>এখানে আপনি পাবেন সব ধরনের প্রোডাক্ট — ফ্যান, লাইট, চার্জার, মোবাইল ও আরও অনেক কিছু!</p>
+</div>
+
+<section class="categories">
+  <h2>📦 প্রোডাক্ট ক্যাটাগরি | Product Categories</h2>
+  <div class="category-grid">
+    <div class="category">ফ্যান | Fan</div>
+    <div class="category">ফ্রিজ | Fridge</div>
+    <div class="category">লাইট | Light</div>
+    <div class="category">মোবাইল | Mobile</div>
+    <div class="category">চার্জার | Charger</div>
+    <div class="category">ইলেকট্রনিক্স | Electronics</div>
+    <div class="category">গৃহস্থালী | Household</div>
+  </div>
+</section>
+
+<section class="discounts">
+  <h2>💥 ডিসকাউন্ট প্রোডাক্টস | Discounted Products</h2>
+  <div class="product-grid">
+    <div class="product">
+      <img src="https://via.placeholder.com/150x100?text=Fan" alt="Fan" />
+      <p>ডিলাক্স ফ্যান - ১৫% ছাড়</p>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/150x100?text=Fridge" alt="Fridge" />
+      <p>স্যামসাং ফ্রিজ - ১০% ছাড়</p>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/150x100?text=Charger" alt="Charger" />
+      <p>ফাস্ট চার্জার - ২০% ছাড়</p>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <h2>💬 ক্রেতাদের মতামত | Customer Feedback</h2>
+  <blockquote>
+    "সত্যিই দারুন সার্ভিস! পণ্য খুব তাড়াতাড়ি হাতে পেয়েছি। ধন্যবাদ M2Vai Shop!" – মেহেদী, চট্টগ্রাম
+  </blockquote>
+  <blockquote>
+    "অনেক ভালো প্রোডাক্ট। আমি আবার অর্ডার করবো।" – রুবেল, নারায়ণগঞ্জ
+  </blockquote>
+</section>
+
+<footer>
+  © ২০২৫ M2Vai Shop | ডিজাইন করেছে ChatGPT 💙
+</footer>
+
+<div class="chat-box">
+  <button class="chat-button" onclick="toggleChat()">💬</button>
+  <div class="chat-window" id="chatWindow">
+    <p>👋 হ্যালো! কীভাবে সাহায্য করতে পারি?</p>
+    <input type="text" placeholder="মেসেজ লিখুন..." />
+  </div>
+</div>
+
+<script>
+  function toggleChat() {
+    const chat = document.getElementById('chatWindow');
+    if (chat.style.display === 'block') {
+      chat.style.display = 'none';
+    } else {
+      chat.style.display = 'block';
+    }
+  }
+</script>
 
 </body>
 </html>
