@@ -5,14 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>M2Vai Shop</title>
   <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap" rel="stylesheet" />
-  <!-- Font Awesome CDN for social icons -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-pb6KHzJ1IV7Xs5qA7m7DX7bKhjEZ8Uf7I2tQxD4thTrUVUyNKXT7v70DeLq6exJ49rWyxS3bqqib3xhc4UP+Dw=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
   <style>
     body {
       margin: 0;
@@ -37,6 +29,13 @@
       align-items: center;
       gap: 15px;
       flex-wrap: wrap;
+    }
+
+    /* .left-auth এখন search এর জায়গায় */
+    .left-auth {
+      display: flex;
+      gap: 10px;
+      align-items: center;
     }
 
     .search-box input {
@@ -190,22 +189,6 @@
       text-align: center;
       font-size: 14px;
       margin-top: 40px;
-      position: relative;
-    }
-
-    /* Social icons inside footer */
-    .social-icons {
-      margin-top: 10px;
-    }
-    .social-icons a {
-      color: white;
-      margin: 0 10px;
-      font-size: 22px;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-    .social-icons a:hover {
-      color: #ffcc00;
     }
 
     .chat-box {
@@ -278,13 +261,15 @@
 <header>
   <h1>M2Vai Shop</h1>
   <div class="header-right">
-    <div class="auth-box">
-      <button>Login</button>
-      <button>Sign Up</button>
-    </div>
+    <!-- Login & Sign Up এখন search box এর জায়গায় -->
     <div class="search-box">
       <input type="text" placeholder="সার্চ করুন | Search" />
       <button>🔍</button>
+    </div>
+    <!-- Search Box এখন Login & Sign Up এর জায়গায় -->
+    <div class="auth-box left-auth">
+      <button>Login</button>
+      <button>Sign Up</button>
     </div>
   </div>
 </header>
@@ -345,11 +330,6 @@
 
 <footer>
   © ২০২৫ M2Vai Shop | ডিজাইন করেছে ChatGPT 💙
-  <div class="social-icons">
-    <a href="https://facebook.com/yourpage" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://youtube.com/yourchannel" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-    <a href="https://instagram.com/yourprofile" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-  </div>
 </footer>
 
 <div class="chat-box">
