@@ -31,6 +31,13 @@
       flex-wrap: wrap;
     }
 
+    /* .left-auth এখন search এর জায়গায় */
+    .left-auth {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
     .search-box input {
       padding: 6px 10px;
       font-size: 14px;
@@ -254,13 +261,15 @@
 <header>
   <h1>M2Vai Shop</h1>
   <div class="header-right">
-    <div class="auth-box">
-      <button>Login</button>
-      <button>Sign Up</button>
-    </div>
+    <!-- Login & Sign Up এখন search box এর জায়গায় -->
     <div class="search-box">
       <input type="text" placeholder="সার্চ করুন | Search" />
       <button>🔍</button>
+    </div>
+    <!-- Search Box এখন Login & Sign Up এর জায়গায় -->
+    <div class="auth-box left-auth">
+      <button>Login</button>
+      <button>Sign Up</button>
     </div>
   </div>
 </header>
