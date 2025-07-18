@@ -1,47 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>M2Vai Shop</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
+    /* আগের ডিজাইনের স্টাইল অপরিবর্তিত রাখা হয়েছে */
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: sans-serif;
     }
-    header {
-      background-color: #1e90ff;
+    .top-bar {
+      background-color: #0059ff;
       color: white;
-      padding: 10px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
+      padding: 10px 20px;
     }
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-    }
-    .search-box input[type="text"] {
+    .top-bar .search-box input {
       padding: 5px;
-      border-radius: 4px;
+      border-radius: 5px;
       border: none;
     }
-    .auth-buttons {
+    .top-bar .auth-buttons {
       display: flex;
       gap: 10px;
     }
-    .auth-buttons button {
-      padding: 6px 12px;
+    .top-bar .auth-buttons button {
+      padding: 5px 10px;
       border: none;
-      border-radius: 4px;
+      border-radius: 5px;
       background-color: white;
-      color: #1e90ff;
+      color: #0059ff;
+      font-weight: bold;
       cursor: pointer;
     }
     nav {
-      background-color: #444;
+      background-color: #000;
       color: white;
       padding: 10px;
       text-align: center;
@@ -53,28 +50,31 @@
       padding: 20px;
     }
     .category {
-      background: #f0f0f0;
-      padding: 10px 20px;
+      background-color: #f2f2f2;
+      padding: 15px;
       margin: 10px;
-      border-radius: 8px;
+      border-radius: 10px;
+      min-width: 100px;
+      text-align: center;
       box-shadow: 0 0 5px rgba(0,0,0,0.1);
     }
     .feedback {
-      padding: 20px;
       background-color: #f9f9f9;
+      padding: 20px;
+      text-align: center;
     }
     footer {
       background-color: #222;
       color: white;
       text-align: center;
-      padding: 20px 10px;
+      padding: 15px 10px;
     }
     .social-icons {
       margin-top: 10px;
     }
     .social-icons a {
       color: white;
-      margin: 0 10px;
+      margin: 0 8px;
       font-size: 20px;
       text-decoration: none;
     }
@@ -85,16 +85,16 @@
 </head>
 <body>
 
-  <header>
+  <div class="top-bar">
     <div class="auth-buttons">
       <button>Login</button>
       <button>Sign Up</button>
     </div>
-    <div class="logo">M2Vai Shop</div>
+    <div class="logo"><strong>M2Vai Shop</strong></div>
     <div class="search-box">
       <input type="text" placeholder="Search...">
     </div>
-  </header>
+  </div>
 
   <nav>
     <p>Navigation Menu</p>
