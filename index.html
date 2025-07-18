@@ -2,150 +2,106 @@
 <html lang="bn">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>M2Vai Shop</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali&display=swap" rel="stylesheet">
   <style>
     body {
-      margin: 0;
       font-family: 'Noto Sans Bengali', sans-serif;
-      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+      background: #f3f4f6;
     }
 
     header {
+      background-color: #0077cc;
+      color: white;
+      padding: 10px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 20px;
-      background-color: #003366;
-      color: white;
+      flex-wrap: wrap;
     }
 
-    .logo {
-      font-size: 22px;
-      font-weight: bold;
+    header h1 {
+      margin: 0;
+      font-size: 26px;
     }
 
-    .header-right {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .header-right input[type="text"] {
-      padding: 6px;
-      border-radius: 5px;
-      border: none;
-      width: 140px;
-    }
-
-    .header-right button {
-      padding: 6px 12px;
-      border: none;
-      border-radius: 5px;
-      color: white;
-      cursor: pointer;
-    }
-
-    .login-btn {
-      background-color: #007bff;
-    }
-
-    .signup-btn {
-      background-color: #28a745;
-    }
-
-    nav {
-      background-color: #00509e;
-      padding: 10px 20px;
+    .nav-links {
       display: flex;
       gap: 15px;
       flex-wrap: wrap;
     }
 
-    nav a {
+    .nav-links a {
       color: white;
       text-decoration: none;
       font-weight: bold;
     }
 
-    .hero {
-      background-color: white;
-      padding: 40px;
-      text-align: center;
+    .top-right {
+      display: flex;
+      gap: 10px;
+      align-items: center;
     }
 
-    .hero h1 {
+    .top-right input[type="text"] {
+      padding: 5px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .top-right button {
+      padding: 5px 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: white;
+      color: #0077cc;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .banner {
+      background-color: #ffffff;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .banner h2 {
+      font-size: 24px;
       margin-bottom: 10px;
     }
 
-    .categories {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-      padding: 20px;
-      background-color: #ffffff;
-    }
-
-    .category {
-      background-color: #e0e0e0;
-      padding: 15px;
-      border-radius: 10px;
-      width: 120px;
-      text-align: center;
-      font-weight: bold;
-    }
-
-    .footer {
-      background-color: #003366;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 40px;
+    .banner p {
+      font-size: 16px;
+      color: #444;
     }
   </style>
 </head>
 <body>
 
-  <!-- Header with Search and Login/Sign Up -->
   <header>
-    <div class="logo">M2Vai Shop</div>
-    <div class="header-right">
-      <input type="text" placeholder="Search..." />
-      <button class="login-btn">Login</button>
-      <button class="signup-btn">Sign Up</button>
+    <h1>M2Vai Shop</h1>
+    <div class="nav-links">
+      <a href="#">🏠 Home / হোম</a>
+      <a href="#">📂 Category / ক্যাটাগরি</a>
+      <a href="#">🔥 Offer / অফার</a>
+      <a href="#">📞 Contact / যোগাযোগ</a>
+      <a href="#">ℹ️ About / আমাদের সম্পর্কে</a>
+    </div>
+    <div class="top-right">
+      <input type="text" placeholder="Search / অনুসন্ধান">
+      <button>Login</button>
+      <button>Sign Up</button>
     </div>
   </header>
 
-  <!-- Navigation Menu -->
-  <nav>
-    <a href="#">🏠 Home | হোম</a>
-    <a href="#">📦 Category | ক্যাটাগরি</a>
-    <a href="#">🔥 Offer | অফার</a>
-    <a href="#">📞 Contact | যোগাযোগ</a>
-    <a href="#">ℹ️ About | আমাদের সম্পর্কে</a>
-  </nav>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>সবকিছু একসাথে, এক জায়গায় | Everything in One Place</h1>
-    <p>এখানে আপনি সব ধরনের পণ্য পাবেন একদম সহজে এবং দ্রুত।</p>
+  <section class="banner">
+    <h2>সবকিছু একসাথে, এক জায়গায় | Everything You Need In One Place</h2>
+    <p>M2Vai Shop - সেরা প্রোডাক্টস, সহজে, দ্রুত!</p>
   </section>
-
-  <!-- Category Section -->
-  <section class="categories">
-    <div class="category">📱 মোবাইল | Mobile</div>
-    <div class="category">💡 লাইট | Light</div>
-    <div class="category">🌬️ ফ্যান | Fan</div>
-    <div class="category">❄️ ফ্রিজ | Fridge</div>
-    <div class="category">🔌 চার্জার | Charger</div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    &copy; 2025 M2Vai Shop | সকল স্বত্ব সংরক্ষিত
-  </footer>
 
 </body>
-    </html>
+</html>
