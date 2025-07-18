@@ -79,6 +79,22 @@
     nav a:hover {
       text-decoration: underline;
     }
+
+    /* লাইভ হেডলাইন স্টাইল */
+    .live-headline {
+      background-color: #0077cc;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+      font-weight: bold;
+      font-size: 18px;
+      user-select: none;
+      overflow: hidden;
+    }
+    .live-headline marquee {
+      cursor: pointer;
+    }
+
     .hero {
       background-color: #ffffff;
       text-align: center;
@@ -315,10 +331,17 @@
   <a href="#">ℹ️ আমাদের সম্পর্কে | About</a>
 </nav>
 
-<div class="hero">
+<!-- লাইভ হেডলাইন -->
+<div class="live-headline">
+  <marquee behavior="scroll" direction="left" scrollamount="6" onmouseover="this.stop()" onmouseout="this.start()">
+    🔥 আজকের স্পেশাল অফার! সকল ফ্যান এবং ফ্রিজে ২০% পর্যন্ত ছাড়। Hurry up! Order now from M2Vai Shop! 🔥
+  </marquee>
+</div>
+
+<section class="hero">
   <h1>Welcome to M2Vai Shop</h1>
   <p>সবকিছু একসাথে, এক জায়গায় | Everything in one place!</p>
-</div>
+</section>
 
 <section class="categories">
   <h2>📦 প্রোডাক্ট ক্যাটাগরি | Product Categories</h2>
@@ -385,7 +408,6 @@
     </a>
   </section>
 
-  <!-- নতুন লিংক যুক্ত -->
   <div class="footer-links">
     <a href="#">Privacy Policy</a> |
     <a href="#">Terms & Conditions</a> |
@@ -407,6 +429,3 @@
     chat.style.display = (chat.style.display === 'block') ? 'none' : 'block';
   }
 </script>
-
-</body>
-</html>
