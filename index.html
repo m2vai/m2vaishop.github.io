@@ -355,9 +355,9 @@
   <h1>M2Vai Shop</h1>
   <div class="header-right">
     <div class="search-box">
-      <input type="text" placeholder="সার্চ করুন | Search" />
+      <input id="searchInput" type="text" placeholder="সার্চ করুন | Search" autocomplete="off"/>
       <button>🔍</button>
-      <div class="search-results"></div>
+      <div class="search-results" id="searchResults"></div>
     </div>
     <div class="auth-box left-auth">
       <button>Login</button>
@@ -462,4 +462,26 @@
   <button class="chat-button" onclick="toggleChat()">💬</button>
   <div class="chat-window" id="chatWindow">
     <p>👋 হ্যালো! কীভাবে সাহায্য করতে পারি?</p>
-    <input type="text" placeholder
+    <input type="text" placeholder="মেসেজ লিখুন..." />
+  </div>
+</div>
+
+<script>
+  // প্রোডাক্ট ডাটা
+  const products = [
+    { name: "ফ্যান", image: "https://via.placeholder.com/150x100?text=Fan" },
+    { name: "ডিলাক্স ফ্যান", image: "https://via.placeholder.com/150x100?text=Deluxe+Fan" },
+    { name: "ফ্রিজ", image: "https://via.placeholder.com/150x100?text=Fridge" },
+    { name: "স্যামসাং ফ্রিজ", image: "https://via.placeholder.com/150x100?text=Samsung+Fridge" },
+    { name: "লাইট", image: "https://via.placeholder.com/150x100?text=Light" },
+    { name: "মোবাইল", image: "https://via.placeholder.com/150x100?text=Mobile" },
+    { name: "চার্জার", image: "https://via.placeholder.com/150x100?text=Charger" },
+    { name: "ফাস্ট চার্জার", image: "https://via.placeholder.com/150x100?text=Fast+Charger" },
+    { name: "ইলেকট্রনিক্স", image: "https://via.placeholder.com/150x100?text=Electronics" },
+    { name: "গৃহস্থালী", image: "https://via.placeholder.com/150x100?text=Household" },
+  ];
+
+  const searchInput = document.getElementById("searchInput");
+  const searchResults = document.getElementById("searchResults");
+
+  searchInput.addEventListener
